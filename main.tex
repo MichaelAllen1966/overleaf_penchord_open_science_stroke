@@ -1,0 +1,162 @@
+% Set up document
+
+\documentclass[xcolor={usenames,dvipsnames}]{beamer}
+\usetheme{Madrid}
+\setbeamersize{text margin left=5mm,text margin right=5mm}
+
+% Dark background with non-white words: 
+% \usecolortheme{owl}
+% \setbeamercolor{normal text}{fg=yellow}
+% \setbeamercolor{frametitle}{fg=yellow}
+% \usebeamercolor[fg]{normal text}
+
+% Used to create a section slide between section
+\AtBeginSection[]{
+  \begin{frame}[noframenumbering, plain]
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+% Used to create a subsection slide between subsections
+% \AtBeginSubsubsection{\frame{\subsubsectionpage}}
+\AtBeginSubsection[]{
+  \begin{frame}[noframenumbering, plain]
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead:\par\phantom{space please}\par\insertsubsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+
+% Remove default navigation symbols and add just  page number
+\setbeamertemplate{navigation symbols}{} % Clear default navigation
+% \addtobeamertemplate{navigation symbols}{}{%
+%     \usebeamerfont{footline}%
+%     \usebeamercolor[fg]{footline}%
+%     \hspace{1em}%
+%     \insertframenumber/\inserttotalframenumber
+% }
+
+% Remove from footer the names, institution, date...
+% and just leave page number:
+\setbeamertemplate{footline}[frame number]
+
+
+% For manual font size:
+\usepackage{anyfontsize}
+
+% For smaller URLs:
+\newcommand{\smallurl}[1]{\textcolor{blue}{\fontsize{4pt}{4.8pt}\selectfont \url{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title page
+
+\title{Open science in the stroke projects}
+
+\author{Anna Laws, Michael Allen, Kerry Pearn}
+
+%\institute{Overleaf}
+\date{November 2022}
+
+
+\begin{document}
+
+%\frame{\titlepage}
+
+\begin{frame}
+\titlepage
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Stroke Projects}
+
+\begin{frame}{The emergency stroke pathway}
+
+\begin{center}
+\includegraphics[width=0.99\textwidth]{./images/pathway}
+\end{center}
+
+\vspace{4mm}
+The central problem we are investigating is there there is a NHS target to give clot-busting drugs (\emph{thrombolysis}) to 20\% of patients, but actually only 11\% patients are receiving them (and this varies from 5\% to 25\% between hospitals).
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{Stroke projects}
+
+\begin{itemize}
+    \setlength\itemsep{2.5mm}
+    \item SAMueL: Stroke Audit Machine Learning 
+    \begin{itemize}
+        \item Emergency stroke clinical pathway simulation
+        \item Machine learning to learn and compare clinical decision-making between hospitals
+        \item Detailed (disability-level) clinical outcome model
+        \item Health economics model
+    \end{itemize}
+    \item OPTIMIST: OPTimising IMplementation of Ischaemic Stroke Thrombectomy
+        \begin{itemize}
+            \item Modelling and optimising the pre-hospital emergency stroke pathway.
+        \end{itemize}
+    \item Mobile Stroke Units (hopefully!)
+    \item Geographic modelling (update)
+    \item Whole stroke system modelling?
+\end{itemize}
+    
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Open Science Tooling}
+
+\begin{frame}{Caveats}
+
+\begin{itemize}
+    \setlength\itemsep{2mm}
+    \item Learning these tools takes time
+    \item We are still learning
+    \item We still shout at things at times
+    \item Other tools exist
+\end{itemize}
+
+\vspace{4mm}
+But.....
+\vspace{4mm}
+
+\begin{itemize}
+    \setlength\itemsep{2mm}
+    \item It works
+    \item We just use free/open tools
+    \item The benefits, and quality of what may be produced, far outweigh the challenges
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Our stack of tools}
+
+
+\begin{center}
+\includegraphics[width=0.99\textwidth]{./images/open_science_light}
+\end{center}
+
+
+\end{frame}
+
+
+\end{document}
+
+
